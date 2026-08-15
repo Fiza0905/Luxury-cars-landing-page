@@ -1,0 +1,392 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Automobile Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+	body {
+		margin:0px;
+		overflow-x: hidden;
+		}
+	#header {
+		margin:0 auto;
+		width:100%;
+		position: fixed;
+		 z-index:99;
+		max-width:1240px;
+		margin-left: 50%;
+    transform: translateX(-50%);
+	}
+	.container {
+		max-width:100%;
+		margin: 0px;
+		padding: 0px;
+	}
+     ul {
+			list-style-type:none;
+			overflow:hidden;
+			padding:0px;
+			margin:0px;
+			font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+			font-size:14px;
+			font-weight: bolder;
+		    background-color:#ff5f00;
+		    padding-left:78px;
+	    }
+		li {
+			float:left;
+		}
+		li a {
+			color:#000000;
+			display:block;
+			padding:30px 18px;
+			text-decoration: none;
+		}
+		
+		li a:hover {
+			color:#ffffff;
+			}
+	 #search {
+		margin:auto;
+		position:relative;
+		width:100%;
+		max-width:1240px;
+		padding-top:200px;
+	 }
+	.button {
+		background-color:#ffffff;
+		border:none;
+		float:right;
+		border-bottom:2px solid #000000;
+        padding-bottom: 20px;
+		width:270px;
+		margin-right:40px;
+		display:inline-flex;
+	}
+	 .search {
+		border:none;
+		font-size:18px;
+        outline:none;
+		font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+		font-weight:bold;
+      
+	 }
+	.search-icon {
+		margin-right:12px;
+	}
+    .button:focus-within {
+    border-bottom: 2px solid #ff5f00;
+   }
+	#about {
+		margin:auto;
+		position:relative;
+		width:100%;
+		max-width:1240px;
+		padding-top:100px;
+		
+	}
+	.h4 {
+		font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+		font-size:15px;
+		font-weight: bold;
+		padding-left:80px;
+		}
+	.h1 {
+		font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+		padding-left:80px;
+	}
+	.p {
+		font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		padding-left:80px;
+		font-size:16px;
+         padding-right:60px;
+			
+	}
+	
+	#cars {
+		margin:auto;
+		position:relative;
+		width:100%;
+		max-width:1240px;
+		margin-top:40px;
+		padding-left:20px;
+	}
+	.menu {
+			background-color:#ffffff;
+			list-style-type:disc;
+			overflow: hidden;
+	       position: absolute;
+			width:100%;
+		   max-width: none;
+		   margin-left:20px;
+		}
+		.menu li {
+			float:none;
+			display:list-item;
+			padding-bottom: 10px;
+			position: relative;
+			z-index:10;
+			
+		}
+		.menu li a {
+			display:inline;
+			text-decoration:none;
+		    color:#ff5f00;
+			font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+			margin-left:-15px;
+		}
+	.car-image {
+       display:block;
+		margin:auto;
+		padding-top:80px;
+	   }
+	#cars-info {
+		margin:auto;
+		position:relative;
+		width:100%;
+		max-width:1240px;
+		margin-top:250px;
+		padding-left:20px;
+	}
+	.heading {
+		font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+		padding-left:60px;
+		font-size:38px;
+	}
+	a {
+		color:#ff5f00;
+		text-decoration: none;
+	}
+	#rental {
+		margin:auto;
+		position:relative;
+		width:100%;
+		max-width:1240px;
+		margin-top:10px;
+	}
+	.downleft-menu {
+		   background-color:#ffffff;
+			list-style-type:none;
+			overflow: hidden;
+	       position: absolute;
+			width:100%;
+		   max-width: none;
+		   margin-left:20px;
+		}
+		.downleft-menu li {
+			float:none;
+			display:list-item;
+			padding-bottom: 8px;
+			
+		}
+		.downleft-menu li a {
+			display:inline;
+			text-decoration:none;
+		    color:#ff5f00;
+			font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+			margin-left:-15px;
+		}
+	
+	.downright-menu {
+		background-color:#ffffff;
+			list-style-type:none;
+			overflow: hidden;
+	       position: absolute;
+			width:100%;
+		   max-width: none;
+		   margin-left:20px;
+		}
+		.downright-menu li {
+			float:none;
+			display:list-item;
+			padding-bottom: 10px;
+			
+		}
+		.downright-menu li a {
+			display:inline;
+			text-decoration:none;
+		    color:#ff5f00;
+			font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+			margin-left:-15px;
+		}
+</style>
+</head>
+
+<body>
+<section id="header">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<ul>
+	<li><a href="https://www.sixt.com/magazine/" target="_blank">HOME</a></li>
+	<li><a href="https://www.sixt.com/magazine/travel/" target="_blank">TRAVEL</a></li>
+	<li><a href="https://www.sixt.com/magazine/road-trips/" target="_blank">ROAD TRIPS</a></li>
+	<li><a href="https://www.sixt.com/magazine/tips/" target="_blank">GUIDES & TIPS</a></li>
+	<li><a href="https://www.sixt.com/magazine/tones-of-the-sea/" target="_blank">TONES OF THE SEA</a></li>
+	<li><a href="https://www.sixt.com/magazine/fleet/" target="_blank">FLEET</a></li>
+	<li><a href="https://www.sixt.com/magazine/news/" target="_blank">NEWS</a></li>
+	<li><a href="https://www.sixt.com/magazine/special/" target="_blank">SPECIAL OFFER</a></li>
+	<li><a href="https://www.sixt.com/" target="_blank">RENT A CAR</a></li>
+	</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="search">
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+</div>
+<div class="col-lg-6">
+<button type="button" class="button">
+<img class="search-icon"  src="search-svgrepo.svg" alt="search" height="28px">
+<input type="text" class="search" name="search" placeholder="SEARCH THE SITE..." required>
+</button>
+</div>
+</div>
+</div>
+</section>
+<section id="about">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<h4 class="h4">SIXT MAGAZINE/ GUIDES & TIPS/ ULTIMATE LUXURY RIDES: THE 10 MOST EXPENSIVE CARS IN THE WORLD</h4>
+<h1 class="h1">ULTIMATE LUXURY RIDES: THE 10 MOST EXPENSIVE CARS IN THE WORLD</h1>
+<article>
+<p class="p">Who wouldn’t want to drive an exceptional car? Reserved for the wealthy elite, these one-of-a-kind vehicles make the entire world take notice of their unique designs, their muscular engines and plenty of horsepower. Powerful, seductive and original, luxury cars make us dream. But as these elite cars get better and better over the years, their prices go up too!<br><br>That’s why we took it upon ourselves to find out how much the most expensive car in the world costs. Back in 2018, our top 10 most expensive cars in the world cost a total of almost $28.5 million. In 2022, our top 10 cost a whopping $114.6 million. That’s enough to make someone aspire to win the lottery! In the meantime, let’s discover the 10 most expensive supercars that are like works of art.</p>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section id="cars">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<h3 style="font-family:Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif'; font-size:22px; padding-left:60px;">THE TOP 10</h3>
+<ul class="menu">
+<li>
+<a href="#boat_tail">1. Rolls-Royce Boat Tail</a>
+</li>
+<li>
+<a href="#bugatti_voiture">2. Bugatti la Voiture Noire</a>
+</li>
+<li>
+<a href="#pagani">3. Pagani Zonda HP Barchetta</a>
+</li>
+<li>
+<a href="#sweptail">4. Rolls-Royce Sweptail</a>
+</li>
+<li>
+<a href="#bugatti_cento">5. Bugatti Centodieci</a>
+</li>
+<li>
+<a href="#veneno">6. Lamborghini Veneno</a>
+</li>
+<li>
+<a href="#maybach">7. Maybach Exelero</a>
+</li>
+<li>
+<a href="#divo">8. Bugatti Divo</a></li>
+<li>
+<a href="#trevita">9. Koenigsegg CCXR Trevita</a>
+</li>
+<li>
+ <a href="#aspark">10. Aspark Owl</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="cars-info">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<img src="rolls-royce-boat-tail.jpg" alt="rolls-royce" class="car-image" width="1024" height="700">
+<p class="p">The interior of the most expensive car in the world, the Rolls-Royce Boat Tail. Photo: Caesar Fung on Shutterstock</p>
+<h1 id="boat_tail" class="heading">1. Rolls-Royce Boat Tail: $26.2 million</h1>
+<p class="p">The Rolls-Royce Boat Tail is by far the most expensive new car of all time. This 18.7-foot-long convertible with its vintage and modern design is powered by a twin-turbo V12 (6.75 liters for 563 horsepower) and 8-speed automatic transmission. This “rolling yacht” was produced only three times, and reserved for billionaires given its astronomical price.</p><br>
+<h1 id="bugatti_voiture" class="h1">2. Bugatti la Voiture Noire: $18.1 million</h1>
+<p class="p">This road-legal one-off takes the French brand to the top of the podium. Inspired by the Bugatti 57 SC Atlantic, everything about this hypercar is exceptional: An 8-liter, 16-cylinder engine with 1,500 horsepower, assembled by hand. It is the work of a goldsmith, so it is not surprising that this unique example was acquired by a Swiss buyer.</p><br>
+<iframe width="1080" height="520" src="https://www.youtube.com/embed/QIlOZFmHfVs" style="margin-left:60px;">
+</iframe>
+<h1 id="pagani" class="h1">3. Pagani Zonda HP Barchetta: $17.9 million</h1>
+<p class="p">Horacio Pagani – from the eponymous firm – had this concept car built for him and two other lucky unknown owners. If this roadster made a lot of noise when it was presented, it remains an enigma: Its technical information is, at least at the moment, a mystery.</p><br>
+<iframe width="1080" height="520" src="https://www.youtube.com/embed/7_fsh3jJyxw" style="margin-left:60px;">
+</iframe>
+<h1 id="sweptail" class="h1">4. Rolls-Royce Sweptail: $13.2 million</h1>
+<p class="p">Rolls-Royce, the luxury car brand par excellence, is on the list again with this one-off, built on demand: the Sweptail. This is another concept car that calls itself the “automotive equivalent of haute couture”. And besides looking good, it has power under the hood to the rhythm of a V12 engine with 453 horsepower.</p><br>
+<iframe width="1080" height="520" src="https://www.youtube.com/embed/3OoCQCgpBnI" style="margin-left:60px;">
+</iframe>
+<h1 id="bugatti_cento" class="h1">5. Bugatti Centodieci: $9.1 million</h1>
+<p class="p">We’re back in France and finally under the $10 million mark with the Bugatti Centodieci. Inspired by a tribute to the Bugatti EB110 and built on a Bugatti Chiron base, the “110” has a lot going for it. You get 1,600 horsepower and an 8-liter W16 with a top speed of 236 miles per hour. Boom!</p><br>
+<iframe width="1080" height="520" src="https://www.youtube.com/embed/QsAF0rTA7ec" style="margin-left:60px;">
+</iframe>
+<h1 id="veneno" class="h1">6. Lamborghini Veneno: $8.3 million</h1>
+<p class="p">Let’s go back to the future of the automobile with the Lamborghini Veneno, a roadster that defies the law of gravity with its cosmic curves inspired by aeronautics. This hypercar, produced only nine times, cannot fly but can reach 221 miles per hour with its 6.5-liter V12. In short, it’s a car that puts stars in your eyes.</p><br>
+<iframe width="1080" height="520" src="https://www.youtube.com/embed/O2dgfvXVZ48" style="margin-left:60px;">
+</iframe>
+<h1 id="maybach" class="h1">7. Maybach Exelero: $8 million</h1>
+<p class="p">Here’s one more unique model, the Maybach Exelero. This coupe was ordered by a tire brand, Fulda, to test and promote a new series of tires. The exercise was a success: its performance on the track was stellar because of its 5.9-liter engine and 700 horsepower. It was definitely a good deal from Fulda.</p><br>
+<iframe width="1080" height="520" src="https://www.youtube.com/embed/D3GK7R00-Ik" style="margin-left:60px;">
+</iframe>
+<h1 id="divo" class="h1">8. Bugatti Divo: $5.7 million</h1>
+<p class="p">What do the 40 owners of the Bugatti Divo have in common? They all own a Bugatti Chiron as well. While the two luxury cars are similar (the same 8-liter W16 engine with 1,500 hp and a similar interior), the Divo stands out for its exceptional design.</p><br>
+<iframe width="1080" height="520" src="https://www.youtube.com/embed/hqDT5_4z_YI" style="margin-left:60px;">
+</iframe>
+<h1 id="trevita" class="h1">9. Koenigsegg CCXR Trevita: $4.8 million</h1>
+<p class="p">The limited-edition CCXR was only produced twice, and the Koenigsegg CCXR Trevita is less known than its “sisters” but is no less powerful and fast: It goes from 0 to 124 mph in 8.75 seconds. This Swedish car weighs 1.4 tons, a featherweight compared to Ferrari, Aston Martin or Lamborghini</p><br>
+<iframe width="1080" height="520" src="https://www.youtube.com/embed/FEmG0gSUBhQ" style="margin-left:60px;">
+</iframe>
+<h1 id="aspark" class="h-1">10. Aspark Owl: $3.3 million</h1>
+<p class="p">This Japanese supercar is not technically the 10th most expensive car in the world, but it is the most expensive electric car in the world. It is also the fastest electric car! Made only 50 times, it has four super-powerful electric motors that make it go from 0 to 60 mph in 1.69 seconds, a record. Another exceptional fact is that it is one of the lowest electric cars with a height of 39 inches. The Aspark Owl is, therefore, No. 1 for electric cars on many points.</p><br>
+<iframe width="1080" height="520" src="https://www.youtube.com/embed/s-8jUlWn9S0" style="margin-left:60px;">
+</iframe>
+<h1 class="h1">Car rental with SIXT</h1>
+<p class="p">Whether you’re traveling for business or pleasure, renting a car from <a href="https://www.sixt.com/" target="_blank">SIXT</a> offers you the most premium car rental experience that is second to none. Plus, with our top-quality vehicles and excellent customer service, you can relax and enjoy the ride.</p>
+<p class="p">To rent a car from SIXT, simply visit our website or mobile app and enter your pickup location, dates, and times. From there, you can browse our selection of vehicles and choose the one that best suits your needs. You can even add extras like GPS navigation or child seats to your reservation for added convenience. Check out our top airports in the U.S. and experience the SIXT difference today.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="rental">
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<ul class="downleft-menu">
+<li><a href="https://www.sixt.com/car-rental/usa/orlando/orlando-int-airport/" target="_blank">Car rental Orlando Airport</a></li>
+	<li><a href="https://www.sixt.com/car-rental/usa/denver/denver-airport/" target="_blank">Car rental Denver Airport</a></li>
+	<li><a href="https://www.sixt.com/car-rental/usa/fort-lauderdale/fort-lauderdale-airport/" target="_blank">Car rental Fort Lauderdale Airport</a></li>
+	<li><a href="https://www.sixt.com/car-rental/usa/las-vegas/las-vegas-mccarran-airport/" target="_blank">Car rental Las Vegas Airport</a></li>
+	<li><a href="https://www.sixt.com/car-rental/usa/san-diego-ca/san-diego-airport/" target="_blank">Car rental San Diego Airport</a></li>
+	<li><a href="https://www.sixt.com/car-rental/usa/atlanta/atlanta-hartsfield-airport/" target="_blank">Car rental Atlanta Airport</a></li>
+	<li><a href="https://www.sixt.com/car-rental/usa/tampa/tampa-airport/" target="_blank">Car rental Tampa Airport</a></li>
+	<li><a href="https://www.sixt.com/car-rental/usa/seattle/seattle-tacoma-int-airport/" target="_blank">Car rental Seattle Airport</a></li>
+	<li><a href="https://www.sixt.com/car-rental/usa/miami-fl/miami-international-airport/" target="_blank">Car rental Miami Airport</a></li> 
+	<li><a href="https://www.sixt.com/car-rental/usa/phoenix/phoenix-sky-harbor-intairport/" target="_blank">Car rental Phoenix Airport</a></li> 
+</ul>
+</div>
+<div class="col-lg-6">
+<ul class="downright-menu">
+<li><a href="https://www.sixt.com/car-rental/usa/boston/boston-int-airport/" target="_blank">Car rental Boston Airport</a></li>
+	<li><a href="https://www.sixt.com/car-rental/usa/newark/newark-int-airport-ewr/" target="_blank">Car rental Newark Airport</a></li>
+	<li><a href="https://www.sixt.com/car-rental/usa/los-angeles/los-angeles-airport/" target="_blank">Car rental Los Angeles Airport</a></li>
+	<li><a href="https://www.sixt.com/car-rental/usa/dallas/dallas-fort-worth-airport/" target="_blank">Car rental Dallas Airport</a></li>
+	<li><a href="https://www.sixt.com/car-rental/usa/new-york-city/new-york-jfk-int-airport/" target="_blank">Car rental JFK Airport</a></li>
+	<li><a href="https://www.sixt.com/car-rental/usa/honolulu/honolulu-airport/" target="_blank">Car rental Honolulu Airport</a></li>
+	<li><a href="https://www.sixt.com/car-rental/usa/houston/houston-george-bush-airport/" target="_blank">Car rental Houston Airport</a></li>
+	<li><a href="https://www.sixt.com/car-rental/usa/washington-dc/dulles-airport/" target="_blank">Car rental Dulles Airport</a></li>
+	<li><a href="https://www.sixt.com/car-rental/usa/chicago/chicago-airport/" target="_blank">Car rental Chicago Airport</a></li> 
+	<li><a href="https://www.sixt.com/car-rental/usa/kahului/maui-kahului-airport/" target="_blank">Car rental Maui Airport</a></li> 
+</ul>
+</div>
+</div>
+</div>
+</section>
+</body>
+</html>
